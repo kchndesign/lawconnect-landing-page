@@ -1,0 +1,21 @@
+@use "/src/css/variables";
+
+.actionButton {
+    height: 2.5rem;
+    color: variables.$light;
+    background-color: variables.$primary-blue-light;
+
+    font-weight: 600;
+
+    border-radius: 5px;
+    border: none;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: variables.$primary-blue-strong;
+    }
+}

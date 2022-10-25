@@ -1,0 +1,65 @@
+/*----------  Master stylesheet contains global styles.  ----------*/
+
+/*----------  Import modules  ----------*/
+
+@use "reset";
+@use "variables" as *;
+// import 'Nunito Sans'
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
+
+/*=============================================
+=            Global Styles            =
+=============================================*/
+
+/*----------  Branding  ----------*/
+
+// all text styling
+body {
+    font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // all headings are primary blue
+    color: $primary-blue-strong;
+}
+
+// all paragraph text is off dark to be less jarring
+p {
+    color: $dark-off;
+}
+
+// text with light modifier for dark backgrounds
+.light {
+    color: $light;
+}
+
+/*----------  Components  ----------*/
+// i imagine that these will be used throughout the site, not just the landing page.
+
+.action-button {
+    height: 2.5rem;
+    color: $light;
+    background-color: $primary-blue-light;
+
+    border-radius: 5px;
+
+    border: none;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-blue-strong;
+    }
+}
+
+/*----------  Utilities  ----------*/
+
+/*=====  End of Global Styles  ======*/

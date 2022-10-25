@@ -1,0 +1,44 @@
+@use "/src/css/variables";
+@use "/src/css/breakpoints";
+
+.navbar {
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: variables.$primary-blue-strong;
+
+    // dark background requires light text
+    color: variables.$light;
+
+    // logo styling
+    &__logo {
+        height: 2rem;
+    }
+
+    // list styling
+    &__navList {
+        // reset list styling
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        // large screens require side by side links
+        @include breakpoints.tablet {
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
+        }
+    }
+
+    &__loginControls {
+        // large screens require side by side links
+        @include breakpoints.tablet {
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
+        }
+    }
+}
