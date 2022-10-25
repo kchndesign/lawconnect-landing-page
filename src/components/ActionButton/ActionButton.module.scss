@@ -3,7 +3,7 @@
 .actionButton {
     height: 2.5rem;
     color: variables.$light;
-    background-color: variables.$primary-blue-light;
+    background-color: variables.$sky-blue;
 
     font-weight: 600;
 
@@ -16,6 +16,6 @@
     cursor: pointer;
 
     &:hover {
-        background-color: variables.$primary-blue-strong;
+        background-color: variables.$dark-blue;
     }
 }

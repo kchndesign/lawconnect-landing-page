@@ -1,6 +1,54 @@
 @use "/src/css/variables";
 @use "/src/css/breakpoints";
 
+/*=============================================
+=            Mixins and utilities            =
+=============================================*/
+
+@mixin flexWhenDesktop {
+    @include breakpoints.tablet {
+        display: flex;
+        column-gap: 2rem;
+        align-items: center;
+    }
+}
+
+// utility class that will disappear nav items when on smaller screens.
+.desktopNav {
+    display: none;
+
+    @include breakpoints.tablet {
+        display: unset;
+    }
+}
+
+// utility class that will only display nav items when on smaller screens
+.mobileNav {
+    @include breakpoints.tablet {
+        display: none;
+    }
+}
+
+// utility class to reset list styling
+@mixin resetList {
+    // reset list styling
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*=====  End of Mixins and utilities  ======*/
+
+/*----------  Navbar wrapper has full width background colour when scroled down  ----------*/
+
+.navbarWrapper {
+    background-color: variables.$vivid-blue;
+}
+
+/*=============================================
+=            Navbar styling            =
+=============================================*/
+
 .navbar {
     padding: 1rem;
 
@@ -8,37 +56,99 @@
     justify-content: space-between;
     align-items: center;
 
-    background-color: variables.$primary-blue-strong;
+    // max width and centred
+    max-width: variables.$max-width;
+    margin-inline: auto;
 
     // dark background requires light text
     color: variables.$light;
 
-    // logo styling
+    // z-index 1000
+    position: relative;
+    z-index: 1000;
+
+    /*----------  Logo styling  ----------*/
+
     &__logo {
         height: 2rem;
     }
 
-    // list styling
-    &__navList {
-        // reset list styling
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    /*----------  desktop list styling  ----------*/
 
+    &__navList {
+        @include resetList;
         // large screens require side by side links
-        @include breakpoints.tablet {
-            display: flex;
-            column-gap: 2rem;
-            align-items: center;
-        }
+        @include flexWhenDesktop();
     }
+
+    /*----------  desktop login controls styling  ----------*/
 
     &__loginControls {
         // large screens require side by side links
-        @include breakpoints.tablet {
-            display: flex;
-            column-gap: 2rem;
-            align-items: center;
+        @include flexWhenDesktop();
+    }
+
+    /*----------  mobile dropdown wrapper styling  ----------*/
+
+    // burger menu dropdown wrapper
+    &__dropdownMenu {
+        // full width dropdown
+        width: 100%;
+        padding: 1rem;
+        background-color: variables.$vivid-blue;
+
+        position: absolute;
+
+        // dock to the right
+        right: 0px;
+
+        // z-index should be under the main nav
+        z-index: -100;
+
+        // default vertical poosition is hidden
+        top: 0;
+        transform: translateY(-110%);
+
+        // add transition
+        transition: transform linear 0.25s;
+
+        // styling to display the menu
+        &--display {
+            top: 100%;
+            transform: translateY(0);
         }
     }
+
+    /*----------  Mobile dropdown list styling  ----------*/
+
+    &__dropdownList {
+        @include resetList;
+
+        // push list to the right
+        width: max-content;
+        margin-left: auto;
+    }
+
+    /*----------  Mobile dropdown link styling  ----------*/
+    // make links bigger for touch accessbility
+
+    &__dropdownLink {
+        display: block;
+        padding: 1rem;
+    }
+
+    /*----------  Mobile Dropdown Menu button  ----------*/
+
+    &__dropdownMenuButton {
+        // reset button styling.
+        border: none;
+        background-color: transparent;
+
+        // add padding for touch accessibility
+        padding: 0.5rem;
+
+        cursor: pointer;
+    }
 }
+
+/*=====  End of Navbar styling  ======*/
