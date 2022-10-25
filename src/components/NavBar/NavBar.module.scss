@@ -69,89 +69,89 @@
     color: variables.$light;
 
     position: relative;
-
-    /*----------  Logo styling  ----------*/
-
-    &__logo {
-        height: 2rem;
-    }
-
-    /*----------  desktop list styling  ----------*/
-
-    &__navList {
-        @include resetList;
-        // large screens require side by side links
-        @include flexWhenDesktop();
-    }
-
-    /*----------  desktop login controls styling  ----------*/
-
-    &__loginControls {
-        // large screens require side by side links
-        @include flexWhenDesktop();
-    }
-
-    /*----------  mobile dropdown wrapper styling  ----------*/
-
-    // burger menu dropdown wrapper
-    &__dropdownMenu {
-        // full width dropdown
-        width: 100%;
-        padding: 1rem;
-        background-color: variables.$vivid-blue;
-
-        position: absolute;
-
-        // dock to the right
-        right: 0px;
-
-        // z-index should be under the main nav
-        z-index: -100;
-
-        // default vertical poosition is hidden
-        top: 0;
-        transform: translateY(-110%);
-
-        // add transition
-        transition: transform linear 0.25s;
-
-        // styling to display the menu
-        &--display {
-            top: 100%;
-            transform: translateY(0);
-        }
-    }
-
-    /*----------  Mobile dropdown list styling  ----------*/
-
-    &__dropdownList {
-        @include resetList;
-
-        // push list to the right
-        width: max-content;
-        margin-left: auto;
-    }
-
-    /*----------  Mobile dropdown link styling  ----------*/
-    // make links bigger for touch accessbility
-
-    &__dropdownLink {
-        display: block;
-        padding: 1rem;
-    }
-
-    /*----------  Mobile Dropdown Menu button  ----------*/
-
-    &__dropdownMenuButton {
-        // reset button styling.
-        border: none;
-        background-color: transparent;
-
-        // add padding for touch accessibility
-        padding: 0.5rem;
-
-        cursor: pointer;
-    }
 }
 
 /*=====  End of Navbar styling  ======*/
+
+/*----------  Logo styling  ----------*/
+
+.logo {
+    height: 2rem;
+}
+
+/*----------  desktop list styling  ----------*/
+
+.navList {
+    @include resetList;
+    // large screens require side by side links
+    @include flexWhenDesktop();
+}
+
+/*----------  desktop login controls styling  ----------*/
+
+.loginControls {
+    // large screens require side by side links
+    @include flexWhenDesktop();
+}
+
+/*----------  mobile dropdown wrapper styling  ----------*/
+
+// burger menu dropdown wrapper
+.dropdownMenu {
+    // full width dropdown
+    width: 100%;
+    padding: 1rem;
+    background-color: variables.$vivid-blue;
+
+    position: absolute;
+
+    // dock to the right
+    right: 0px;
+
+    // z-index should be under the main nav
+    z-index: -100;
+
+    // default vertical poosition is hidden
+    top: 0;
+    transform: translateY(-110%);
+
+    // add transition
+    transition: transform linear 0.25s;
+
+    // styling to display the menu
+    &--display {
+        top: 100%;
+        transform: translateY(0);
+    }
+}
+
+/*----------  Mobile dropdown list styling  ----------*/
+
+.dropdownList {
+    @include resetList;
+
+    // push list to the right
+    width: max-content;
+    margin-left: auto;
+}
+
+/*----------  Mobile dropdown link styling  ----------*/
+// make links bigger for touch accessbility
+
+.dropdownLink {
+    display: block;
+    padding: 1rem;
+}
+
+/*----------  Mobile Dropdown Menu button  ----------*/
+
+.dropdownMenuButton {
+    // reset button styling.
+    border: none;
+    background-color: transparent;
+
+    // add padding for touch accessibility
+    padding: 0.5rem;
+
+    cursor: pointer;
+}

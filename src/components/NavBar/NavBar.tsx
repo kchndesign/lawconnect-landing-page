@@ -27,15 +27,13 @@ function NavBar(): JSX.Element {
                     <img
                         src={Logo}
                         alt="LawConnect logo"
-                        className={Styles.navbar__logo}
+                        className={Styles.logo}
                     />
                 </a>
                 {/* ---------------------------- */}
                 {/* nav items for larger screens */}
                 {/* ---------------------------- */}
-                <ul
-                    className={`${Styles.navbar__navList} ${Styles.desktopNav}`}
-                >
+                <ul className={`${Styles.navList} ${Styles.desktopNav}`}>
                     <li>
                         <a href="/">For People</a>
                     </li>
@@ -47,9 +45,7 @@ function NavBar(): JSX.Element {
                     </li>
                 </ul>
                 {/* login controls */}
-                <div
-                    className={`${Styles.navbar__loginControls} ${Styles.desktopNav}`}
-                >
+                <div className={`${Styles.loginControls} ${Styles.desktopNav}`}>
                     <a href="/">Login</a>
                     <ActionButton text="Create Free Account" />
                 </div>
@@ -58,44 +54,44 @@ function NavBar(): JSX.Element {
                 {/* ----------------------------- */}
                 {/* hamburger menu button */}
                 <button
-                    className={`${Styles.navbar__dropdownMenuButton} ${Styles.mobileNav}`}
+                    className={`${Styles.dropdownMenuButton} ${Styles.mobileNav}`}
                     onClick={handleDropdownButtonClick}
                 >
                     <img src={MenuIcon} alt="Menu" />
                 </button>
                 {/* Wrapper for the dropdown menu */}
                 <div
-                    className={`${Styles.navbar__dropdownMenu} 
+                    className={`${Styles.dropdownMenu} 
                         ${
                             // conditional statement to set class when menu is toggled.
                             isDisplayDropdown
-                                ? Styles["navbar__dropdownMenu--display"]
+                                ? Styles["dropdownMenu--display"]
                                 : ""
                         } ${Styles.mobileNav}`}
                 >
                     {/* Unordered List for the dropdown menu */}
-                    <ul className={Styles.navbar__dropdownList}>
+                    <ul className={Styles.dropdownList}>
                         <li>
-                            <a href="/" className={Styles.navbar__dropdownLink}>
+                            <a href="/" className={Styles.dropdownLink}>
                                 For People
                             </a>
                         </li>
                         <li>
-                            <a href="/" className={Styles.navbar__dropdownLink}>
+                            <a href="/" className={Styles.dropdownLink}>
                                 For Businesses
                             </a>
                         </li>
                         <li>
-                            <a href="/" className={Styles.navbar__dropdownLink}>
+                            <a href="/" className={Styles.dropdownLink}>
                                 Contact
                             </a>
                         </li>
                         <li>
-                            <a href="/" className={Styles.navbar__dropdownLink}>
+                            <a href="/" className={Styles.dropdownLink}>
                                 Login
                             </a>
                         </li>
-                        <li className={Styles.navbar__dropdownLink}>
+                        <li className={Styles.dropdownLink}>
                             <ActionButton text="Create Free Account" />
                         </li>
                     </ul>

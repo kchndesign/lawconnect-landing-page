@@ -1,4 +1,3 @@
-import { idText } from "typescript";
 import Styles from "./ActionButton.module.scss";
 
 // declare props for component
