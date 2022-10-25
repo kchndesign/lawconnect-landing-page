@@ -103,10 +103,13 @@
 
 // burger menu dropdown wrapper
 .dropdownMenu {
+    // transparent vivid blue background with frosted effect
+    background-color: rgba(variables.$vivid-blue, 0.6);
+    backdrop-filter: blur(20px);
+
     // full width dropdown
     width: 100%;
     padding: 1rem;
-    background-color: variables.$vivid-blue;
 
     position: absolute;
 
