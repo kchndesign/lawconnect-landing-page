@@ -1,3 +1,6 @@
+@use "./css/variables";
+@use "./css/breakpoints";
+
 /*=============================================
 =            Mixins and utilities            =
 =============================================*/
@@ -9,14 +12,95 @@
 =============================================*/
 
 .section {
+    // base section styling is layout agnostic
     min-height: 35rem;
+    max-width: variables.$max-width;
+    margin-inline: auto;
 
     // for commonly used sections that have text on one side and an image on the other.
     &--side-by-side {
+        // mobile first
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        padding: 2rem;
+
+        // in stacked layout, text is always after image
+        .section__text {
+            order: 2;
+        }
+
+        .section__image {
+            order: 1;
+        }
+
+        // larger screens have sections side by side
+        @include breakpoints.desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            column-gap: 3rem;
+
+            padding: 1rem;
+
+            // in side by side layout, order is whatever is in the markup
+            .section__image,
+            .section__text {
+                order: unset;
+            }
+        }
+    }
+
+    // for side by side sections, text box is a bit smaller than the image
+    &__text {
+        max-width: 30rem;
     }
 }
 
 /*=====  End of Regular Classes  ======*/
+
+/*=============================================
+=            Hero Unique styling            =
+=============================================*/
+
+#heroTitle {
+    font-size: 2rem;
+    line-height: 1.16;
+    color: variables.$light;
+
+    text-align: center;
+
+    @include breakpoints.tablet {
+        font-size: 3rem;
+    }
+
+    @include breakpoints.desktop {
+        text-align: start;
+    }
+}
+
+#heroText {
+    color: variables.$light-off;
+    margin-block: 1rem;
+    text-align: center;
+    @include breakpoints.desktop {
+        text-align: start;
+        margin-block: 2rem;
+    }
+}
+
+#heroButton {
+    width: 100%;
+
+    @include breakpoints.tablet {
+        width: auto;
+    }
+}
+
+#heroSectionWrapper {
+    // hero section wrapper has lawconnect gradient
+    background: linear-gradient(variables.$vivid-blue, variables.$dark-blue);
+}
+
+/*=====  End of Hero Unique styling  ======*/
