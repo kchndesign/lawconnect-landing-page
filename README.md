@@ -47,9 +47,9 @@ few times. The second was that, since I was to create a hamburger menu
 implementation by hand, I would need to manage the toggle state of the dropdown
 menu.
 
-The action buttons and cards were extracted into components because they were
-used more than once on the page. They didn't have any state, so were just
-presentational components.
+The action buttons and cards were obvious candidates to be extracted into
+components because they were used more than once on the page. They didn't have
+any state, so were just presentational components.
 
 ### Scoped vs Unscoped CSS
 
