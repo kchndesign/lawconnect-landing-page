@@ -1,10 +1,16 @@
 import ActionButton from "./components/ActionButton/ActionButton";
 import NavBar from "./components/NavBar/NavBar";
+import "./LandingPage.scss";
+import Card from "./components/Card/Card";
+
+// hero asset imports
 import HeroMobile from "./assets/images/lc-hero-mobile.png";
 import HeroMobile2x from "./assets/images/lc-hero-mobile@2x.png";
 import HeroDesktop from "./assets/images/lc-hero-desktop.png";
 import HeroDesktop2x from "./assets/images/lc-hero-desktop@2x.png";
-import "./LandingPage.scss";
+
+// import feature cards data
+import { FeatureCardData, featureCardsData } from "./data/feature-cards";
 
 function LandingPage(): JSX.Element {
     return (
@@ -96,7 +102,12 @@ function LandingPage(): JSX.Element {
                     One Solution Designed to Make Your Firm More Money
                 </h2>
 
-                <div className="card-container"></div>
+                <div className="card-container">
+                    {/* render a card for every FeatureCardData entity in array */}
+                    {featureCardsData.map((cardData) => {
+                        return <Card featureCardData={cardData} />;
+                    })}
+                </div>
             </div>
         </>
     );
