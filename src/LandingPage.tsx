@@ -25,13 +25,15 @@ function LandingPage(): JSX.Element {
             */}
 
             <div className="section__wrapper" id="heroSectionWrapper">
+                <div id="heroSectionCircleLarger"></div>
+                <div id="heroSectionCircleSmaller"></div>
                 <section className="section section--side-by-side">
                     {/* 
                     
                     Hero section text content
                     
                     */}
-                    <div className="section__text section__text--hero">
+                    <div className="section__text" id="heroTextContent">
                         <h1 id="heroTitle">
                             The place to work with your lawyer
                         </h1>
@@ -52,7 +54,7 @@ function LandingPage(): JSX.Element {
 
                     */}
 
-                    <div className="section__image">
+                    <div className="section__image" id="heroImage">
                         <picture>
                             {/* mobile source */}
                             <source
