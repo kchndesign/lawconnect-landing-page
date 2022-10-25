@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# LawConnect Landing Page Exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Find this project hosted here](https://codesandbox.io/p/github/kchndesign/lawconnect-landing-page/main)
 
-## Available Scripts
+This is a mock landing page that usees create-react-app with the typescript
+template. It was built to demonstrate my ability to recreate an Adobe XD mockup
+as well as my current knowledge in front end development. This was a task given
+to me during the recruitment process for a junior front end web developer
+position.
 
-In the project directory, you can run:
+## Project Brief
 
-### `npm start`
+### Aims
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The aims of the project are to demonstrate my knowledge in the following:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-   React
+-   Typescript
+-   SASS/SCSS
 
-### `npm test`
+### Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Create a page referencing the provided design files, trying to match it as
+    closely as possible.
+-   Avoid using UI kits or CSS libraries/frameworks.
+-   Free to use vanilla JS or a modern framework of your choice.
+-   Avoid libraries for simple tasks.
 
-### `npm run build`
+## Implementation Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Component Architecture Philosophy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Upon completing this project, there were only 3 'reusable' components:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   A navbar component that took no props
+-   An action button component
+-   A card component
 
-### `npm run eject`
+Most of the markup for the landing page was contained in a `LandingPage` file.
+The rationale here is that since the page is unlikely to change dynamically and
+features little interaction or data fetching, there was no reason to
+over-engineer a solution that would split the page further into sub components.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The navbar was encapsulated into a component for two reasons. The first was that
+on a production website, the nav bar would most obviously be used more than a
+few times. The second was that, since I was to create a hamburger menu
+implementation by hand, I would need to manage the toggle state of the dropdown
+menu.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The action buttons and cards were extracted into components because they were
+used more than once on the page. They didn't have any state, so were just
+presentational components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Scoped vs Unscoped CSS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### UI Changes
