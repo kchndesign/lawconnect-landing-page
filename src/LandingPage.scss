@@ -47,7 +47,7 @@
             justify-content: space-between;
             column-gap: 3rem;
 
-            padding: 1rem;
+            padding: 2rem;
 
             // in side by side layout, order is whatever is in the markup
             .section__image,
@@ -70,6 +70,20 @@
         @include breakpoints.tablet {
             font-size: 2.25rem;
         }
+    }
+}
+
+// card container renders cards in a dynamic way
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+
+    > * {
+        margin-inline: auto;
     }
 }
 

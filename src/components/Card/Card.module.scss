@@ -1,0 +1,30 @@
+@use "../../css/breakpoints";
+@use "../../css/variables";
+
+.card {
+    max-width: 20rem;
+    box-shadow: 0px 5px 15px #00000026;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.contentBox {
+    padding: 1.5rem;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 1.75;
+    object-fit: cover;
+}
+
+.title {
+    color: variables.$vivid-blue;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.description {
+    color: variables.$dark-off;
+    font-weight: 600;
+}

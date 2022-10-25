@@ -10,7 +10,7 @@ import HeroDesktop from "./assets/images/lc-hero-desktop.png";
 import HeroDesktop2x from "./assets/images/lc-hero-desktop@2x.png";
 
 // import feature cards data
-import { FeatureCardData, featureCardsData } from "./data/feature-cards";
+import { featureCardsData } from "./data/feature-cards";
 
 function LandingPage(): JSX.Element {
     return (
@@ -104,8 +104,8 @@ function LandingPage(): JSX.Element {
 
                 <div className="card-container">
                     {/* render a card for every FeatureCardData entity in array */}
-                    {featureCardsData.map((cardData) => {
-                        return <Card featureCardData={cardData} />;
+                    {featureCardsData.map((cardData, index) => {
+                        return <Card featureCardData={cardData} key={index} />;
                     })}
                 </div>
             </div>
