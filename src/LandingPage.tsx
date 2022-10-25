@@ -77,6 +77,27 @@ function LandingPage(): JSX.Element {
                     </div>
                 </section>
             </div>
+
+            {/* 
+            
+            
+            
+
+
+            Feature cards section
+
+            
+            
+            
+            */}
+
+            <div className="section">
+                <h2 className="text-centre">
+                    One Solution Designed to Make Your Firm More Money
+                </h2>
+
+                <div className="card-container"></div>
+            </div>
         </>
     );
 }
