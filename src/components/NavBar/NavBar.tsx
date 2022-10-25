@@ -65,12 +65,13 @@ function NavBar(): JSX.Element {
                 </button>
                 {/* Wrapper for the dropdown menu */}
                 <div
-                    className={`${Styles.navbar__dropdownMenu} ${
-                        // conditional statement to set class when menu is toggled.
-                        isDisplayDropdown
-                            ? Styles["navbar__dropdownMenu--display"]
-                            : ""
-                    } ${Styles.mobileNav}`}
+                    className={`${Styles.navbar__dropdownMenu} 
+                        ${
+                            // conditional statement to set class when menu is toggled.
+                            isDisplayDropdown
+                                ? Styles["navbar__dropdownMenu--display"]
+                                : ""
+                        } ${Styles.mobileNav}`}
                 >
                     {/* Unordered List for the dropdown menu */}
                     <ul className={Styles.navbar__dropdownList}>

@@ -1,0 +1,22 @@
+/*=============================================
+=            Mixins and utilities            =
+=============================================*/
+
+/*=====  End of Mixins and utilities  ======*/
+
+/*=============================================
+=            Regular Classes            =
+=============================================*/
+
+.section {
+    min-height: 35rem;
+
+    // for commonly used sections that have text on one side and an image on the other.
+    &--side-by-side {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+/*=====  End of Regular Classes  ======*/
