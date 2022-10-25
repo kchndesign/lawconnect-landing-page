@@ -158,7 +158,10 @@
 
 #heroSectionWrapper {
     // hero section wrapper has lawconnect gradient
-    background: linear-gradient(variables.$vivid-blue, variables.$dark-blue);
+    background: linear-gradient(
+        variables.$vivid-blue 10%,
+        variables.$dark-blue
+    );
 
     // overflow prevents the circle motif from showing
     overflow: hidden;
