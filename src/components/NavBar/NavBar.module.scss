@@ -42,10 +42,14 @@
 /*----------  Navbar wrapper has full width background colour when scrolled down  ----------*/
 // is also docked to the top of the screen
 
-.navbarWrapper {
-    background-color: variables.$vivid-blue;
+.wrapper {
+    // transparent vivid blue background with frosted effect
+    background-color: rgba(variables.$vivid-blue, 0.6);
+    backdrop-filter: blur(20px);
 
-    position: sticky;
+    // dock to the top of screen without taking space in flow
+    position: fixed;
+    width: 100%;
     z-index: 1000;
     top: 0;
 }
@@ -117,12 +121,16 @@
     transform: translateY(-110%);
 
     // add transition
-    transition: transform linear 0.25s;
+    // transition: transform linear 0.25s;
+
+    // display: none;
 
     // styling to display the menu
     &--display {
         top: 100%;
         transform: translateY(0);
+
+        // display: block;
     }
 }
 

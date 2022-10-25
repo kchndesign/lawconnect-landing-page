@@ -84,6 +84,7 @@
     }
 
     p {
+        color: variables.$dark-off;
         margin-block: 1rem;
     }
 
@@ -105,6 +106,11 @@
     > * {
         margin-inline: auto;
     }
+}
+
+.footer {
+    min-height: 10rem;
+    background-color: variables.$dark;
 }
 
 /*=====  End of Regular Classes  ======*/
@@ -154,6 +160,9 @@
 
     // overflow prevents the circle motif from showing
     overflow: hidden;
+
+    min-height: 37.5rem;
+    padding-top: 2.5rem;
 }
 
 #heroTextContent {

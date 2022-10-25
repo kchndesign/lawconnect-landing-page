@@ -20,9 +20,10 @@ function NavBar(): JSX.Element {
     }
 
     return (
-        <div className={Styles.navbarWrapper}>
+        <div className={Styles.wrapper}>
             <nav className={Styles.navbar} id="navbar">
                 {/* logo */}
+
                 <a href="/">
                     <img
                         src={Logo}
@@ -30,9 +31,11 @@ function NavBar(): JSX.Element {
                         className={Styles.logo}
                     />
                 </a>
+
                 {/* ---------------------------- */}
                 {/* nav items for larger screens */}
                 {/* ---------------------------- */}
+
                 <ul className={`${Styles.navList} ${Styles.desktopNav}`}>
                     <li>
                         <a href="/">For People</a>
@@ -44,22 +47,29 @@ function NavBar(): JSX.Element {
                         <a href="/">Contact</a>
                     </li>
                 </ul>
+
                 {/* login controls */}
+
                 <div className={`${Styles.loginControls} ${Styles.desktopNav}`}>
                     <a href="/">Login</a>
                     <ActionButton text="Create Free Account" />
                 </div>
+
                 {/* ----------------------------- */}
                 {/* nav items for smaller screens */}
                 {/* ----------------------------- */}
+
                 {/* hamburger menu button */}
+
                 <button
                     className={`${Styles.dropdownMenuButton} ${Styles.mobileNav}`}
                     onClick={handleDropdownButtonClick}
                 >
                     <img src={MenuIcon} alt="Menu" />
                 </button>
+
                 {/* Wrapper for the dropdown menu */}
+
                 <div
                     className={`${Styles.dropdownMenu} 
                         ${
@@ -70,6 +80,7 @@ function NavBar(): JSX.Element {
                         } ${Styles.mobileNav}`}
                 >
                     {/* Unordered List for the dropdown menu */}
+
                     <ul className={Styles.dropdownList}>
                         <li>
                             <a href="/" className={Styles.dropdownLink}>

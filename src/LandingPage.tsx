@@ -40,8 +40,6 @@ function LandingPage(): JSX.Element {
             */}
 
             <div className="section__wrapper" id="heroSectionWrapper">
-                <div id="heroSectionCircleLarger"></div>
-                <div id="heroSectionCircleSmaller"></div>
                 <section className="section section--side-by-side">
                     {/* 
                     
@@ -220,6 +218,19 @@ function LandingPage(): JSX.Element {
                     </p>
                 </div>
             </div>
+
+            {/* 
+            
+            
+            
+            Footer
+            
+            
+            
+            
+            */}
+
+            <div className="footer"></div>
         </>
     );
 }
