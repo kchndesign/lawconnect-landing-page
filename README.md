@@ -2,7 +2,7 @@
 
 ## [Find this project hosted here](https://codesandbox.io/p/github/kchndesign/lawconnect-landing-page/main)
 
-This is a mock landing page that usees create-react-app with the typescript
+This is a mock landing page that uses create-react-app with the typescript
 template. It was built to demonstrate my ability to recreate an Adobe XD mockup
 as well as my current knowledge in front end development. This was a task given
 to me during the recruitment process for a junior front end web developer
