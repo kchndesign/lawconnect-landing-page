@@ -16,13 +16,12 @@
 =============================================*/
 
 .section {
-    // base section styling is layout agnostic
     min-height: 35rem;
     max-width: variables.$max-width;
     margin-inline: auto;
 
     // mobile first
-    // section default styling is stacked
+    // base section default styling is stacked
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -62,6 +61,18 @@
         max-width: 30rem;
     }
 
+    // for side by side sections, images have a max size
+    // also place the image in the centre of the container
+    &__image {
+        flex-grow: 1;
+
+        img,
+        picture {
+            max-width: 27rem;
+            margin-inline: auto;
+        }
+    }
+
     // general typography for landing page sections
     h2 {
         font-size: 1.5rem;
@@ -70,6 +81,15 @@
         @include breakpoints.tablet {
             font-size: 2.25rem;
         }
+    }
+
+    p {
+        margin-block: 1rem;
+    }
+
+    // wrapper is used to give full width background colors
+    &__wrapper--off-white {
+        background-color: variables.$light-off;
     }
 }
 
@@ -144,6 +164,12 @@
 #heroImage {
     position: relative;
     z-index: 0;
+
+    img,
+    picture {
+        max-width: min(100%, 40rem);
+        margin-inline: auto;
+    }
 
     // hero image has a circle motif behind it
     &::before {
