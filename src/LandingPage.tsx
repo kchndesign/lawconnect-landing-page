@@ -26,46 +26,32 @@ function LandingPage(): JSX.Element {
         <>
             <NavBar />
 
-            {/* 
-            
-            
-            
-            
-            Hero section
-            
-            
-            
-            
-            
-            */}
+            {/* --------------------- */}
+            {/*      Hero section     */}
+            {/* --------------------- */}
 
             <div className="section__wrapper" id="heroSectionWrapper">
                 <section className="section section--side-by-side">
-                    {/* 
-                    
-                    Hero section text content
-                    
-                    */}
+                    {/* Hero section text content */}
+
                     <div className="section__text" id="heroTextContent">
                         <h1 id="heroTitle">
                             The place to work with your lawyer
                         </h1>
+
                         <p id="heroText">
                             Your lawyer uses LawConnect to share information
                             with you about your legal case in a private,
                             convenient and secure way.
                         </p>
+
                         <ActionButton
                             text="Create Free Account"
                             id="heroButton"
                         />
                     </div>
 
-                    {/* 
-                    
-                    Hero section images
-
-                    */}
+                    {/* Hero section images */}
 
                     <div className="section__image" id="heroImage">
                         <picture>
@@ -91,18 +77,9 @@ function LandingPage(): JSX.Element {
                 </section>
             </div>
 
-            {/* 
-            
-            
-            
-
-
-            Feature cards section
-
-            
-            
-            
-            */}
+            {/* --------------------- */}
+            {/* Feature cards section */}
+            {/* --------------------- */}
 
             <div className="section">
                 <h2 className="text-centre">
@@ -117,19 +94,9 @@ function LandingPage(): JSX.Element {
                 </div>
             </div>
 
-            {/* 
-            
-            
-            
-
-
-
-            Sharing Documents section
-
-
-
-
-            */}
+            {/* ------------------------- */}
+            {/* Sharing Documents section */}
+            {/* ------------------------- */}
 
             <div className="section__wrapper--off-white">
                 <div className="section section--side-by-side">
@@ -163,20 +130,9 @@ function LandingPage(): JSX.Element {
                 </div>
             </div>
 
-            {/* 
-            
-            
-            
-            
-            
-            
-            Signing documents section
-            
-            
-            
-            
-            
-            */}
+            {/* ------------------------- */}
+            {/* Signing documents section */}
+            {/* ------------------------- */}
 
             <div className="section section--side-by-side">
                 {/* signing documents -> images */}
@@ -219,16 +175,9 @@ function LandingPage(): JSX.Element {
                 </div>
             </div>
 
-            {/* 
-            
-            
-            
-            Footer
-            
-            
-            
-            
-            */}
+            {/* ------------------------- */}
+            {/*          Footer           */}
+            {/* ------------------------- */}
 
             <div className="footer"></div>
         </>
